@@ -1,0 +1,17 @@
+services:
+  angular:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    user: 1000:1000
+    entrypoint:
+    - sh
+    - -c
+    ports:
+    - 4200:4200
+    command:
+    - |
+      ng serve --host 0.0.0.0
+    volumes:
+    - ./my-app:/app
+    # docker-compose run --rm angular ng generate component product-list
