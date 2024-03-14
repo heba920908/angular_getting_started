@@ -14,4 +14,6 @@ services:
       ng serve --host 0.0.0.0
     volumes:
     - ./my-app:/app
-    # docker-compose run --rm angular ng generate component product-list
+    # docker-compose up
+    # docker-compose exec angular ng generate component product-list
+    # docker-compose exec angular ng generate service cart
